@@ -1,3 +1,3 @@
 # Personal-Website
 
-Check it out - https://www.saffataziz.site/
+Check it out - https://saffataziz.netlify.com/
