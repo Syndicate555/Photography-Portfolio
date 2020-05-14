@@ -104,7 +104,17 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                        <img src="img/3.jpg">
+                        <img src="img/3.jpg" id="myImg" style="width: 100%; max-width:100%">
+                        <div id="myModal" class="modal">
+                            <!-- The Close Button -->
+                            <span class="close">&times;</span>
+                        
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content" id="img01">
+                          
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                          </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -428,6 +438,7 @@ img.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  console.log("clicked");
 };
 
 // Get the <span> element that closes the modal
