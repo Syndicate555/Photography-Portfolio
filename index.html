@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                        <img src="img/2.jpg" id="myImg" style="width:100%;max-width:100%">
+                        <img src="img/2.jpg" id="myImg" style="width:100%;max-width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
                         <div id="myModal" class="modal">
                             <!-- The Close Button -->
                             <span class="close">&times;</span>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                        <img src="img/3.jpg" id="myImg" style="width: 100%; max-width:100%">
+                        <img src="img/3.jpg" id="myImg" style="width: 100%; max-width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
                         <div id="myModal" class="modal">
                             <!-- The Close Button -->
                             <span class="close">&times;</span>
@@ -119,12 +119,12 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                        <img src="img/a.jpg">
+                        <img src="img/a.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                        <img src="img/b.jpg">
+                        <img src="img/b.jpg"onclick="openModal();currentSlide(4)" class="hover-shadow">
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -306,6 +306,59 @@
                 </div>
                 
             </div>
+            <!-- Modal Experiment -->
+            <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="img1_wide.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="img2_wide.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="img3_wide.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="img4_wide.jpg" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+      </div>
+    </div>
+  </div>
             <!-- <a class="btn btn-default btn-lg">Read More</a> -->
         </div>
     </section>
@@ -428,26 +481,27 @@ sr.reveal(".info-right", {
 });
     </script>
     <script>
-        var modal = document.getElementById("myModal");
+//         var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-  console.log("clicked");
-};
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("myImg");
+// var modalImg = document.getElementById("img01");
+// var captionText = document.getElementById("caption");
+// img.onclick = function () {
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+//   console.log("clicked");
+// };
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function () {
+//   modal.style.display = "none";
+// };
+
     </script>
 </body>
 
