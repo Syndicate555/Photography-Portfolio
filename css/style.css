@@ -116,6 +116,7 @@ footer {
   display: block;
   width: 100%;
   max-width: 700px;
+  height: 1000px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -149,7 +150,8 @@ footer {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
+  top: 65px;
+  bottom: auto;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;
